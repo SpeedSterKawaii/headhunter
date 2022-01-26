@@ -1,4 +1,6 @@
-#include "execution.h"
+#include "execution/execution.h"
+#include "api/api.h"
+
 #include <stack>
 #include <mutex>
 
@@ -6,7 +8,21 @@ std::mutex mutex;
 std::stack<std::string> script_queue;
 std::uintptr_t original_func;
 
-struct roblox_encoder_t : public Luau::BytecodeEncoder
+
+int test1(std::uintptr_t rl)
+{
+	output << console::color::cyan << "test1 called!\n";
+	return 0;
+}
+
+int test2(std::uintptr_t rl)
+{
+	output << console::color::cyan << "test2 called!\n";
+	return 0;
+}
+
+
+class roblox_encoder_t : public Luau::BytecodeEncoder
 {
 	std::uint8_t encodeOp(const std::uint8_t opcode) override
 	{
@@ -17,6 +33,7 @@ struct roblox_encoder_t : public Luau::BytecodeEncoder
 int __fastcall scheduler_cycle(std::uintptr_t waiting_scripts_job, int fakearg, int a2)
 {
 	std::unique_lock<std::mutex> guard{ mutex };
+	std::uintptr_t rl = execution.scheduler->get_global_luastate();
 
 	if (!script_queue.empty())
 	{
@@ -33,9 +50,10 @@ int __fastcall scheduler_cycle(std::uintptr_t waiting_scripts_job, int fakearg, 
 		}
 		else
 		{
-			rbx_deserialize(execution.scheduler->get_global_luastate(), "headhunter.exe", bytecode.c_str(), bytecode.size());
-			rbx_spawn(execution.scheduler->get_global_luastate());
-			rbx_decrement_top(execution.scheduler->get_global_luastate(), 1);
+			rbx_testfunc(rl);
+			rbx_deserialize(rl, "headhunter.exe", bytecode.c_str(), bytecode.size());
+			rbx_spawn(rl);
+			rbx_decrement_top(rl, 1);
 		}
 	}
 

@@ -1,4 +1,4 @@
-#include "console.h"
+#include "console/console.h"
 
 console::console(const std::string& title)
 {

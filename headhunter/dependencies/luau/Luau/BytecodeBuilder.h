@@ -119,7 +119,7 @@ public:
 private:
     struct Constant
     {
-        enum Type
+        enum class Type
         {
             Type_Nil,
             Type_Boolean,

@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\addresses\addresses.cpp" />
-    <ClCompile Include="src\cheat\cheat.cpp" />
+    <ClCompile Include="src\api\api.cpp" />
     <ClCompile Include="src\communication\communication.cpp" />
     <ClCompile Include="src\console\console.cpp" />
     <ClCompile Include="src\execution\execution.cpp" />
@@ -60,8 +59,8 @@
     <ClInclude Include="luau\Luau\StringUtils.h" />
     <ClInclude Include="luau\Luau\TimeTrace.h" />
     <ClInclude Include="luau\lvm.h" />
-    <ClInclude Include="src\addresses\addresses.h" />
-    <ClInclude Include="src\cheat\cheat.h" />
+    <ClInclude Include="src\addresses\addresses.hpp" />
+    <ClInclude Include="src\api\api.h" />
     <ClInclude Include="src\communication\communication.h" />
     <ClInclude Include="src\console\console.h" />
     <ClInclude Include="src\execution\execution.h" />
@@ -167,7 +166,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\vsprojects\headhunter\headhunter\luau\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vsprojects\headhunter\headhunter\src;D:\vsprojects\headhunter\headhunter\luau\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -187,7 +186,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)dependencies\;$(ProjectDir)dependencies\luau;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\vsprojects\headhunter\headhunter\src;$(ProjectDir)dependencies\;$(ProjectDir)dependencies\luau;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

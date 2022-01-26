@@ -6,9 +6,9 @@
 #include <Luau/Compiler.h>
 #include <Luau/BytecodeBuilder.h>
 
-#include "../addresses/addresses.h"
-#include "../scheduler/scheduler.h"
-#include "../console/console.h"
+
+#include "scheduler/scheduler.h"
+#include "console/console.h"
 
 class execution_t
 {

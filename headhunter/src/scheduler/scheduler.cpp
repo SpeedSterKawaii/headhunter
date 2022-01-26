@@ -1,6 +1,6 @@
-#include "scheduler.h"
-#include "../addresses/addresses.h"
-#include "../console/console.h"
+#include "scheduler/scheduler.h"
+#include "console/console.h"
+#include "api/api.h"
 
 scheduler_t::scheduler_t()
 {

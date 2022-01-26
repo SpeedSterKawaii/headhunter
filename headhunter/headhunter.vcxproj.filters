@@ -21,13 +21,7 @@
     <ClCompile Include="src\console\console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\cheat\cheat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\scheduler\scheduler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\addresses\addresses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\execution\execution.cpp">
@@ -36,18 +30,15 @@
     <ClCompile Include="src\communication\communication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\api\api.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\console\console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\cheat\cheat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\scheduler\scheduler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\addresses\addresses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="luau\Luau\Ast.h">
@@ -150,6 +141,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\communication\communication.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\api\api.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\addresses\addresses.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
