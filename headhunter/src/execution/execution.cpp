@@ -50,7 +50,7 @@ int __fastcall scheduler_cycle(std::uintptr_t waiting_scripts_job, int fakearg, 
 		}
 		else
 		{
-			rbx_testfunc(rl);
+			// rbx_testfunc(rl);
 			rbx_deserialize(rl, "headhunter.exe", bytecode.c_str(), bytecode.size());
 			rbx_spawn(rl);
 			rbx_decrement_top(rl, 1);

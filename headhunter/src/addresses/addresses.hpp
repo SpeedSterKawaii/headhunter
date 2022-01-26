@@ -14,23 +14,23 @@ namespace func_defs
 
 namespace addresses
 {
-	const std::uintptr_t rbx_getscheduler_addy = current_module + 0xde3590;
-	const std::uintptr_t rbx_output_addy = current_module + 0x223380;
-	const std::uintptr_t rbx_getstate_addy = current_module + 0x3a97b0;
-	const std::uintptr_t rbx_pushvfstring_addy = current_module + 0x169ef10;
+	const std::uintptr_t rbx_getscheduler_addy = current_module + 0x00DE4AE0;
+	const std::uintptr_t rbx_output_addy = current_module + 0x00220530;
+	const std::uintptr_t rbx_getstate_addy = current_module + 0x003A65C0;
+	const std::uintptr_t rbx_pushvfstring_addy = current_module + 0x015EA4E0;
 
-	const std::uintptr_t spawn_func_addy = current_module + 0x3c0d90;
-	const std::uintptr_t deserializer_func_addy = current_module + 0x16a2f40;
+	const std::uintptr_t spawn_func_addy = current_module + 0x003BE510;
+	const std::uintptr_t deserializer_func_addy = current_module + 0x015EE590;
 
-	const std::uintptr_t pushcclosure_addy = current_module + 0x16c20e0;
-	const std::uintptr_t pushcclosure_exit_addy = current_module + 0x16c2210;
+	const std::uintptr_t pushcclosure_addy = current_module + 0x0160E810;
+	const std::uintptr_t pushcclosure_exit_addy = current_module + 0x0160E995;
 
-	const std::uintptr_t test_func_addy = current_module + 0x16c38c0;
-	const std::uintptr_t xpcall_func_closure_addy = current_module + 0x16c7bd0 + 1; // *(_DWORD *)(closure + 24) = (unsigned int)sub_1AC0B90 ^ (closure + 24);// CLOSURE A
-	const std::uintptr_t xpcall_string_spot_addy = current_module + 0x2c4cb08;
+	const std::uintptr_t test_func_addy = current_module + 0x016100F0;
+	const std::uintptr_t xpcall_func_closure_addy = current_module + 0x16c7bd0 + 1; // not updated // *(_DWORD *)(closure + 24) = (unsigned int)sub_1AC0B90 ^ (closure + 24);// CLOSURE A
+	const std::uintptr_t xpcall_string_spot_addy = current_module + 0x016145EA;
 
-	const std::uintptr_t fake_ret_addy = current_module + 0xf405ee;
-	const std::uintptr_t callcheck_addy = current_module + 0x17110f9;
+	const std::uintptr_t fake_ret_addy = current_module + 0x0102DF1D;
+	const std::uintptr_t callcheck_addy = current_module + 0x17110f9; // not updated
 }
 
 namespace offsets
@@ -52,7 +52,7 @@ namespace offsets
 		constexpr std::uintptr_t script_context = 0x130;
 	}
 
-	namespace identity
+	namespace identity // not updated
 	{
 		constexpr std::uintptr_t extra_space = 0x6C;
 		constexpr std::uintptr_t identity = 0x18;
@@ -61,6 +61,6 @@ namespace offsets
 	namespace luastate
 	{
 		constexpr std::uintptr_t top = 0x18;
-		constexpr std::uintptr_t base = 0x20;
+		constexpr std::uintptr_t base = 0xC;
 	}
 }
