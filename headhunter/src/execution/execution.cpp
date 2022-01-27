@@ -8,20 +8,6 @@ std::mutex mutex;
 std::stack<std::string> script_queue;
 std::uintptr_t original_func;
 
-
-int test1(std::uintptr_t rl)
-{
-	output << console::color::cyan << "test1 called!\n";
-	return 0;
-}
-
-int test2(std::uintptr_t rl)
-{
-	output << console::color::cyan << "test2 called!\n";
-	return 0;
-}
-
-
 class roblox_encoder_t : public Luau::BytecodeEncoder
 {
 	std::uint8_t encodeOp(const std::uint8_t opcode) override
@@ -50,7 +36,7 @@ int __fastcall scheduler_cycle(std::uintptr_t waiting_scripts_job, int fakearg, 
 		}
 		else
 		{
-			// rbx_testfunc(rl);
+			rbx_testfunc(rl);
 			rbx_deserialize(rl, "headhunter.exe", bytecode.c_str(), bytecode.size());
 			rbx_spawn(rl);
 			rbx_decrement_top(rl, 1);

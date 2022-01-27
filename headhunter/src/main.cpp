@@ -23,7 +23,7 @@ void mainfunc()
     output << console::color::pink << "Got luastate: 0x" << scheduler.get_global_luastate() << "\n";
 
     execution.hook_waiting_scripts_job();
-    // execution.set_identity(7);
+    execution.set_identity(7);
 
     output << console::color::pink << "Successfully set identity to 7!\n";
 

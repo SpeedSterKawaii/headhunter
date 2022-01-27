@@ -26,11 +26,11 @@ namespace addresses
 	const std::uintptr_t pushcclosure_exit_addy = current_module + 0x0160E995;
 
 	const std::uintptr_t test_func_addy = current_module + 0x016100F0;
-	const std::uintptr_t xpcall_func_closure_addy = current_module + 0x16c7bd0 + 1; // not updated // *(_DWORD *)(closure + 24) = (unsigned int)sub_1AC0B90 ^ (closure + 24);// CLOSURE A
-	const std::uintptr_t xpcall_string_spot_addy = current_module + 0x016145EA;
+	const std::uintptr_t xpcall_func_closure_addy = current_module + 0x16145d7 + 1; // *(_DWORD *)(closure + 24) = (unsigned int)sub_1AC0B90 ^ (closure + 24);// CLOSURE A
+	const std::uintptr_t xpcall_string_spot_addy = current_module + 0x2b8ab90;
 
 	const std::uintptr_t fake_ret_addy = current_module + 0x0102DF1D;
-	const std::uintptr_t callcheck_addy = current_module + 0x17110f9; // not updated
+	const std::uintptr_t callcheck_addy = current_module + 0x165ef0a;
 }
 
 namespace offsets
@@ -52,9 +52,9 @@ namespace offsets
 		constexpr std::uintptr_t script_context = 0x130;
 	}
 
-	namespace identity // not updated
+	namespace identity
 	{
-		constexpr std::uintptr_t extra_space = 0x6C;
+		constexpr std::uintptr_t extra_space = 0x68;
 		constexpr std::uintptr_t identity = 0x18;
 	}
 

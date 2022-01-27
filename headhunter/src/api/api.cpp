@@ -150,7 +150,7 @@ void rbx_testfunc(std::uintptr_t rl)
 
 
 	replace_func.write(&a, 4);
-	replace_string.write(func_name, 11);
+	replace_string.write(func_name, 7);
 	strip_callcheck.write(&callcheck_replace, 2);
 
 	__asm {
